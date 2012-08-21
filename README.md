@@ -120,6 +120,11 @@ Example:
 
 Requesting the `embed` field will return an Embed object containing the HTML markup you need to include one of our players in a web page.
 
+## Bindings
+
+  * [Ruby](https://github.com/officialfm/officialfm-v2-ruby)
+  * [PHP](https://github.com/officialfm/officialfm-v2-php)
+
 ## Issues or Questions?
 
 Questions about the API can be asked by [opening an issue](https://github.com/officialfm/api/issues/new) for this project, or contacting us privately [api@official.fm](mailto:api@official.fm).
