@@ -36,7 +36,6 @@ Example:
 {
   "project": {
     "name": "Mac Miller & Pharrell",
-    "src": "http://api.official.fm/projects/SeMD", // deprecated
     "url": "http://api.official.fm/projects/SeMD",
     "tracks_count": 1,
     "cover": {
@@ -65,7 +64,6 @@ Example:
 {
   "playlist": {
     "name": "Macadelic",
-    "src": "http://api.official.fm/playlists/1rp7", // deprecated
     "url": "http://api.official.fm/playlists/1rp7",
     "rough_view_count": null,
     "rough_play_count": null,
@@ -73,7 +71,6 @@ Example:
     "tracks_count": 15,
     "project": {
       "name": "Mac Miller",
-      "src": "http://api.official.fm/projects/f8w6" // deprecated
       "url": "http://api.official.fm/projects/f8w6"
     }
   }
@@ -93,7 +90,6 @@ Example:
     "title": "Love Me As I Have Loved You (prod. Ritz Reynolds)",
     "duration": 75,
     "artist": "Mac Miller",
-    "src": "http://api.official.fm/tracks/D4lw", // deprecated
     "url": "http://api.official.fm/tracks/D4lw",
     "rough_view_count": null,
     "rough_play_count": null,
@@ -116,7 +112,6 @@ Example:
     },
     "project": {
       "name": "Mac Miller",
-      "src": "http://api.official.fm/projects/f8w6" // deprecated
       "url": "http://api.official.fm/projects/f8w6"
     }
   }

@@ -15,7 +15,6 @@ Here is an example of a paginated response:
   {
     "playlist": {
       "name": "Macadelic",
-      "src": "http://api.official.fm/playlists/1rp7", // deprecated
       "url": "http://api.official.fm/playlists/1rp7",
       "rough_view_count": null,
       "rough_play_count": null,
@@ -23,7 +22,6 @@ Here is an example of a paginated response:
       "tracks_count": 15,
     "project": {
       "name": "Mac Miller",
-      "src": "http://api.official.fm/projects/f8w6" // deprecated
       "url": "http://api.official.fm/projects/f8w6"
     }
   }
