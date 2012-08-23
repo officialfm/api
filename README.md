@@ -24,11 +24,15 @@ The only output format supported by the API is JSON.
 ## Endpoints
 
 ### Projects
-  * Get a single project: <http://api.official.fm/projects/:ID?api_version=2>
-  * Get a single project with cover fields: <http://api.official.fm/projects/:ID?fields=cover&api_version=2>
-  * Get tracks of a project: <http://api.official.fm/projects/:ID/tracks?api_version=2>
-  * Get playlists of a project: <http://api.official.fm/projects/:ID/playlists?api_version=2>
-  * Search for projects: <http://api.official.fm/projects/search?q=mac&api_version=2>
+
+  * Endpoints
+    * Get a single project: <http://api.official.fm/projects/:ID?api_version=2>
+    * Get tracks of a project: <http://api.official.fm/projects/:ID/tracks?api_version=2>
+    * Get playlists of a project: <http://api.official.fm/projects/:ID/playlists?api_version=2>
+    * Search for projects: <http://api.official.fm/projects/search?q=mac&api_version=2>
+
+  * Optional fields
+    * Cover: <http://api.official.fm/projects/SeMD?fields=cover&api_version=2>
 
 Examples:
 <http://api.official.fm/projects/SeMD?fields=cover&api_version=2>
@@ -54,13 +58,16 @@ Examples:
 }
 ```
 
-The fields parameter is available only for cover data for tracks.
-
 ### Playlists
-  * Get a single playlist: <http://api.official.fm/playlists/:ID?api_version=2>
-  * Get a single playlist with embed fields: <http://api.official.fm/playlists/:ID?fields=embed&api_version=2>
-  * Get tracks of a playlist: <http://api.official.fm/playlists/:ID/tracks?api_version=2>
-  * Search for playlists: <http://api.official.fm/playlists/search?q=mac&api_version=2>
+
+  * Endpoints
+    * Get a single playlist: <http://api.official.fm/playlists/:ID?api_version=2>
+    * Get a single playlist with embed fields: <http://api.official.fm/playlists/:ID?fields=embed&api_version=2>
+    * Get tracks of a playlist: <http://api.official.fm/playlists/:ID/tracks?api_version=2>
+    * Search for playlists: <http://api.official.fm/playlists/search?q=mac&api_version=2>
+
+  * Optional fields
+    * Embed: <http://api.official.fm/playlists/1rp7?fields=embed&api_version=2>
 
 Example:
 <http://api.official.fm/playlists/1rp7?fields=embed&api_version=2>
@@ -86,15 +93,20 @@ Example:
 }
 ```
 
-The fields parameter is available only for embed data for playlists.
-
 ### Tracks
-  * Get a single track: <http://api.official.fm/tracks/:ID?api_version=2>
-  * Get a single track with streaming and/or cover and/or embed fields: <http://api.official.fm/tracks/:ID?fields=streaming,cover,embed&api_version=2>
-  * Search for tracks: <http://api.official.fm/tracks/search?q=mac&api_version=2>
+
+  * Endpoints
+    * Get a single track: <http://api.official.fm/tracks/:ID?api_version=2>
+    * Get a single track with streaming and/or cover and/or embed fields: <http://api.official.fm/tracks/:ID?fields=streaming,cover,embed&api_version=2>
+    * Search for tracks: <http://api.official.fm/tracks/search?q=mac&api_version=2>
+
+  * Optional fields
+    * Streaming: <http://api.official.fm/tracks/D4lw?fields=streaming&api_version=2>
+    * Cover: <http://api.official.fm/tracks/D4lw?fields=cover&api_version=2>
+    * Embed: <http://api.official.fm/tracks/D4lw?fields=embed&api_version=2>
 
 Example:
-<http://api.official.fm/tracks/D4lw?fields=embed&fields=streaming,cover,embed&api_version=2>
+<http://api.official.fm/tracks/D4lw?fields=streaming,cover,embed&api_version=2>
 
 ```javascript
 {
@@ -130,10 +142,6 @@ Example:
   }
 }
 ```
-
-The fields parameter is available for streaming, cover and/or embed data for tracks.
-
-Requesting the `embed` field will return an Embed object containing the HTML markup you need to include one of our players in a web page.
 
 ## Bindings
 
