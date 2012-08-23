@@ -25,18 +25,20 @@ The only output format supported by the API is JSON.
 
   * Projects
     * Get a single project: <http://api.official.fm/projects/:ID?api_version=2>
+    * Get a single project with cover fields: <http://api.official.fm/projects/:ID?fields=cover&api_version=2>
     * Get tracks of a project: <http://api.official.fm/projects/:ID/tracks?api_version=2>
     * Get playlists of a project: <http://api.official.fm/projects/:ID/playlists?api_version=2>
     * Search for projects: <http://api.official.fm/projects/search?q=mac&api_version=2>
 
-Example:
-<http://api.official.fm/projects/SeMD?api_version=2>
+Examples:
+<http://api.official.fm/projects/SeMD?fields=cover&api_version=2>
 
 ```javascript
 {
   "project": {
     "name": "Mac Miller & Pharrell",
-    "url": "http://api.official.fm/projects/SeMD",
+    "url": "http://api.official.fm/projects/SeMD?api_version=2",
+    "page": null,
     "tracks_count": 1,
     "cover": {
       "urls": {
@@ -47,42 +49,52 @@ Example:
       },
       "id": "3tJI"
     },
-    "playlists_count": 0
+     "playlists_count": 0
   }
 }
 ```
 
+The fields parameter is available only for cover data for tracks.
+
   * Playlists
     * Get a single playlist: <http://api.official.fm/playlists/:ID?api_version=2>
+    * Get a single playlist with embed fields: <http://api.official.fm/playlists/:ID?fields=embed&api_version=2>
     * Get tracks of a playlist: <http://api.official.fm/playlists/:ID/tracks?api_version=2>
     * Search for playlists: <http://api.official.fm/playlists/search?q=mac&api_version=2>
 
 Example:
-<http://api.official.fm/playlists/1rp7?api_version=2>
+<http://api.official.fm/playlists/1rp7?fields=embed&api_version=2>
 
 ```javascript
 {
   "playlist": {
     "name": "Macadelic",
-    "url": "http://api.official.fm/playlists/1rp7",
+    "url": "http://api.official.fm/playlists/1rp7?api_version=2",
+    "page": "http://official.fm/playlists/1rp7",
     "rough_view_count": null,
     "rough_play_count": null,
     "rough_download_count": null,
     "tracks_count": 15,
+    "embed": {
+      "code": "<iframe width='400' height='40' src='http://official.fm/player?skin_bg=000000&skin_fg=FFFFFF&width=400&height=40&feed=http%3A%2F%2Fofficial.fm%2F%2Ffeed%2Fplaylists%2F1rp7' frameborder='0'></iframe>"
+    },
     "project": {
       "name": "Mac Miller",
-      "url": "http://api.official.fm/projects/f8w6"
+      "url": "http://api.official.fm/projects/f8w6?api_version=2"
     }
   }
 }
 ```
 
+The fields parameter is available only for embed data for playlists.
+
   * Tracks
     * Get a single track: <http://api.official.fm/tracks/:ID?api_version=2>
+    * Get a single track with streaming and/or cover and/or embed fields: <http://api.official.fm/tracks/:ID?fields=streaming,cover,embed&api_version=2>
     * Search for tracks: <http://api.official.fm/tracks/search?q=mac&api_version=2>
 
 Example:
-<http://api.official.fm/tracks/D4lw?fields=embed&api_version=2>
+<http://api.official.fm/tracks/D4lw?fields=embed&fields=streaming,cover,embed&api_version=2>
 
 ```javascript
 {
@@ -90,12 +102,13 @@ Example:
     "title": "Love Me As I Have Loved You (prod. Ritz Reynolds)",
     "duration": 75,
     "artist": "Mac Miller",
-    "url": "http://api.official.fm/tracks/D4lw",
+    "url": "http://api.official.fm/tracks/D4lw?api_version=2",
+    "page": "http://official.fm/tracks/D4lw",
     "rough_view_count": null,
     "rough_play_count": null,
     "rough_download_count": null,
     "streaming": {
-      "http": "http://api.official.fm/tracks/D4lw/stream",
+      "http": "http://api.official.fm/tracks/D4lw/stream?api_version=2",
       "rtmp": "rtmpe://fairtilize-174.fcod.llnwd.net/a2251/r2/mp3:/audio2/s/D4/D4lw_3594640?h=949ae69d743987d2cf46801c8ef9485a"
     },
     "cover": {
@@ -108,15 +121,17 @@ Example:
       "id": "tuKi"
     },
     "embed": {
-      "code": "<iframe width='400' height='40' src='http://official.fm/player?skin_bg=000000&skin_fg=FFFFFF&width=400&height=40&feed=http%253A%252F%252Fofficial.fm%252F%252Ffeed%252Ftracks%252FD4lw' frameborder='0'></iframe>"
+      "code": "<iframe width='400' height='40' src='http://official.fm/player?skin_bg=000000&skin_fg=FFFFFF&width=400&height=40&feed=http%3A%2F%2Fofficial.fm%2F%2Ffeed%2Ftracks%2FD4lw' frameborder='0'></iframe>"
     },
     "project": {
       "name": "Mac Miller",
-      "url": "http://api.official.fm/projects/f8w6"
+      "url": "http://api.official.fm/projects/f8w6?api_version=2"
     }
   }
 }
 ```
+
+The fields parameter is available for streaming, cover and/or embed data for tracks.
 
 Requesting the `embed` field will return an Embed object containing the HTML markup you need to include one of our players in a web page.
 
