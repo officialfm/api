@@ -34,7 +34,7 @@ The only output format supported by the API is JSON.
   * Optional fields
     * Cover: <http://api.official.fm/projects/SeMD?fields=cover&api_version=2>
 
-Examples:
+Example:
 <http://api.official.fm/projects/SeMD?fields=cover&api_version=2>
 
 ```javascript
@@ -62,7 +62,6 @@ Examples:
 
   * Endpoints
     * Get a single playlist: <http://api.official.fm/playlists/:ID?api_version=2>
-    * Get a single playlist with embed fields: <http://api.official.fm/playlists/:ID?fields=embed&api_version=2>
     * Get tracks of a playlist: <http://api.official.fm/playlists/:ID/tracks?api_version=2>
     * Search for playlists: <http://api.official.fm/playlists/search?q=mac&api_version=2>
 
@@ -97,7 +96,6 @@ Example:
 
   * Endpoints
     * Get a single track: <http://api.official.fm/tracks/:ID?api_version=2>
-    * Get a single track with streaming and/or cover and/or embed fields: <http://api.official.fm/tracks/:ID?fields=streaming,cover,embed&api_version=2>
     * Search for tracks: <http://api.official.fm/tracks/search?q=mac&api_version=2>
 
   * Optional fields
