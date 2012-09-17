@@ -96,7 +96,10 @@ Example:
 
   * Endpoints
     * Get a single track: <http://api.official.fm/tracks/:ID?api_version=2>
-    * Search for tracks: <http://api.official.fm/tracks/search?q=mac&api_version=2>
+    * Search for tracks: <http://api.official.fm/tracks/search?q=mac&api_version=2><br/>
+_Filter option_: filter search results by types (original, remix, cover, mashup, mixtape)<br/>
+<http://api.official.fm/tracks/search?q=mac&types=original,remix&api_version=2><br/>
+<br/>
 
   * Optional fields
     * Streaming: <http://api.official.fm/tracks/D4lw?fields=streaming&api_version=2>
