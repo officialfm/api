@@ -118,7 +118,7 @@ track(): object
 position(): int:
   Player position in seconds
 
-positionPretty(): String:
+positionPretty(): string:
   Player position formatted "MM:SS"
 
 positionPerc(): int:
