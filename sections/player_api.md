@@ -1,8 +1,8 @@
 # Player API
 
 There are 2 type of players:
-  - Headless Player:  Audio only, you handle the design & UI. [demo page](http://jsfiddle.net/s8suE/21/)
-  - Official.fm Player: Standard Ofm players [demo page](http://jsfiddle.net/UXs5L/15/)
+  - Headless Player:  Audio only, you handle the design & UI. [demo page](http://jsfiddle.net/85LX8/)
+  - Official.fm Player: Standard Ofm players [demo page](http://jsfiddle.net/p6ecF/)
 
 ### Usage: 
 
@@ -17,7 +17,7 @@ Simply include our latest Player API JS library in your HTML document:
 
 # 1. Headless Player
 
-[demo page](http://jsfiddle.net/s8suE/21/)
+[demo page](http://jsfiddle.net/85LX8/)
 
 var player = new OfficialFM.HeadlessPlayer(options)
 
@@ -133,7 +133,7 @@ durationPretty: string:
 
 # 2. Official.fm Player
 
-[demo page](http://jsfiddle.net/UXs5L/15/)
+[demo page](http://jsfiddle.net/p6ecF/)
 
 var player = new OfficialFM.Player(containerId, [options])
 
