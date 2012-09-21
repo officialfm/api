@@ -96,7 +96,7 @@ next()
 previous()
   Move to previous track
 
-seek(seconds):
+seek(sec):
   Move playing head at sec seconds
 
 seekPerc(perc):
@@ -118,8 +118,8 @@ track(): object
 position(): int:
   Player position in seconds
 
-positionPretty(): int:
-  Player position formatted "00:00"
+positionPretty(): String:
+  Player position formatted "MM:SS"
 
 positionPerc(): int:
   Player position in percentage
