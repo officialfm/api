@@ -1,7 +1,5 @@
 # Official.fm API v2
 
-This is the reference guide of all the resources available on Official.fm API v2.
-
 ## Current version
 
 You must specify the API version using the header `X-API-Version` or the parameter `api_version`.
