@@ -39,10 +39,10 @@ new OfficialFM.HeadlessPlayer({
 options (object): player options
 
 type (string): ['tracks'], 'track' or 'playlist'
-   Type of resource you want the player to play (a track, a list of tracks or a playlist)
+   Type of resource you want to play (a track, a list of tracks or a playlist)
 
 id (string):
-  ID of a the resource (track ID when type is 'track' or a playlist ID when type is 'playlist')
+  ID of the resource you want to play (track ID when type is 'track' or a playlist ID when type is 'playlist')
 
 ids (array or comma-separated string):
   List of track IDs when type is 'tracks'. Array (['abcd', 'efgh']) or a comma-separated string of IDs ('abcd, efgh')
