@@ -1,6 +1,6 @@
 # Player API
 
-There are 2 type of players:
+There are 2 types of players:
   - Headless Player:  Audio only, you handle the design & UI. [demo page](http://jsfiddle.net/85LX8/)
   - Official.fm Player: Standard Ofm players [demo page](http://jsfiddle.net/p6ecF/)
 
