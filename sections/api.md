@@ -16,6 +16,7 @@ For example, accessing the URL <http://api.official.fm/greeting?api_version=2> w
 
   * [Authentication](https://github.com/officialfm/api/blob/master/sections/authentication.md)
   * [Pagination](https://github.com/officialfm/api/blob/master/sections/pagination.md)
+  * [Rate Limiting](https://github.com/officialfm/api/blob/master/sections/rate_limiting.md)
 
 The only output format supported by the API is JSON.
 
