@@ -16,6 +16,8 @@ Here is an example of a paginated response:
     "playlist": {
       "name": "Macadelic",
       "url": "http://api.official.fm/playlists/1rp7",
+      "page": "http://official.fm/playlists/1rp7",
+      "buy_url": "http://official.fm/purchases/new?playlist_id=1rp7",
       "rough_view_count": null,
       "rough_play_count": null,
       "rough_download_count": null,
