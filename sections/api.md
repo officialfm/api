@@ -109,6 +109,13 @@ _Filter option_: filter search results by types (original, remix, cover, mashup,
 Example:
 <http://api.official.fm/tracks/D4lw?fields=streaming,cover,embed&api_version=2>
 
+**Note**
+When using streaming optional field, some tracks will have an `availability` field.
+It means that track is available for playing only in specified countries.
+If the availability field is not present, then the track is available worldwide and no restriction applies.
+You won't be able to access audio for those tracks outside the specified countries.
+Also, the `streaming.rtmp` field for those tracks will be missing.
+
 ```javascript
 {
   "track": {
@@ -121,6 +128,13 @@ Example:
     "rough_view_count": null,
     "rough_play_count": null,
     "rough_download_count": null,
+    "availability": [
+      {"name":"Germany","code":"DE"},
+      {"name":"France","code":"FR"},
+      {"name":"United Kingdom","code":"GB"},
+      {"name":"Ukraine","code":"UA"},
+      {"name":"United States","code":"US"}
+    ],
     "streaming": {
       "http": "http://api.official.fm/tracks/D4lw/stream?api_version=2",
       "rtmp": "rtmpe://fairtilize-174.fcod.llnwd.net/a2251/r2/mp3:/audio2/s/D4/D4lw_3594640?h=949ae69d743987d2cf46801c8ef9485a"
