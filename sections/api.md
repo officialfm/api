@@ -27,6 +27,8 @@ The only output format supported by the API is JSON.
   * Endpoints
     * Get a single project: <http://api.official.fm/projects/:ID?api_version=2>
     * Get tracks of a project: <http://api.official.fm/projects/:ID/tracks?api_version=2>
+      Tracks will be sorted by the time they were made public. You can pass `?order=play_count` or `?order=updated_at`
+      to sort them by play count or last updated time respectively.
     * Get playlists of a project: <http://api.official.fm/projects/:ID/playlists?api_version=2>
     * Search for projects: <http://api.official.fm/projects/search?q=mac&api_version=2>
 
@@ -74,6 +76,7 @@ Example:
 {
   "playlist": {
     "name": "Macadelic",
+    "short_url": "http://po.st/Y9VHjN",
     "url": "http://api.official.fm/playlists/1rp7?api_version=2",
     "page": "http://official.fm/playlists/1rp7",
     "buy_url": "http://official.fm/purchases/new?playlist_id=1rp7",
@@ -105,6 +108,7 @@ _Filter option_: filter search results by types (original, remix, cover, mashup,
     * Streaming: <http://api.official.fm/tracks/D4lw?fields=streaming&api_version=2>
     * Cover: <http://api.official.fm/tracks/D4lw?fields=cover&api_version=2>
     * Embed: <http://api.official.fm/tracks/D4lw?fields=embed&api_version=2>
+    * Adzerk: <http://api.official.fm/tracks/D4lw?fields=adzerk&api_version=2>
 
 Example:
 <http://api.official.fm/tracks/D4lw?fields=streaming,cover,embed&api_version=2>
@@ -114,7 +118,6 @@ When using streaming optional field, some tracks will have an `availability` fie
 It means that track is available for playing only in specified countries.
 If the availability field is not present, then the track is available worldwide and no restriction applies.
 You won't be able to access audio for those tracks outside the specified countries.
-Also, the `streaming.rtmp` field for those tracks will be missing.
 
 ```javascript
 {
@@ -122,6 +125,7 @@ Also, the `streaming.rtmp` field for those tracks will be missing.
     "title": "Love Me As I Have Loved You (prod. Ritz Reynolds)",
     "duration": 75,
     "artist": "Mac Miller",
+    "short_url": "http://po.st/Y9VHjN",
     "url": "http://api.official.fm/tracks/D4lw?api_version=2",
     "page": "http://official.fm/tracks/D4lw",
     "buy_url": "http://official.fm/purchases/new?track_id=D4lw",
@@ -137,7 +141,8 @@ Also, the `streaming.rtmp` field for those tracks will be missing.
     ],
     "streaming": {
       "http": "http://api.official.fm/tracks/D4lw/stream?api_version=2",
-      "rtmp": "rtmpe://fairtilize-174.fcod.llnwd.net/a2251/r2/mp3:/audio2/s/D4/D4lw_3594640?h=949ae69d743987d2cf46801c8ef9485a"
+      "hls": "http://cdn-stream.official.fm/i/AFVO/file_,lofi,.mp4.csmil/master.m3u8?hdcore=1&hdnea=exp=1421221482~acl=/i/AFVO/file_,lofi,.mp4.csmil*~hmac=5a9775fdb06d53e6f49f45de8460113b50f6f9140f22b862ddcf6e4b09516518",
+      "hds": "http://cdn-stream.official.fm/z/AFVO/file_,lofi,.mp4.csmil/manifest.f4m?hdcore=1&hdnea=exp=1421221482~acl=/z/AFVO/file_,lofi,.mp4.csmil*~hmac=ec3ee59ee8a83afd8c1ebf42155987ca131c6e32d651873a6f1e63696416ddce"
     },
     "cover": {
       "urls": {
@@ -154,6 +159,10 @@ Also, the `streaming.rtmp` field for those tracks will be missing.
     "project": {
       "name": "Mac Miller",
       "url": "http://api.official.fm/projects/f8w6?api_version=2"
+    },
+    "adzerk" : {
+      "is_activated" : true,
+      "keywords" : ["adzerk", "keywords"]
     }
   }
 }
